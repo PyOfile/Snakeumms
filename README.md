@@ -56,7 +56,7 @@ They are simply bash scripts I wrote to push or pull for git. All ofther git com
 ## yarn dev
 Launches live-server for development
 ```
-yarn add -D live-server
+yarn add live-server -D
 ```
 Or just add it to your projects package.json dev dependencies.
 
