@@ -8,7 +8,7 @@
   "dev": "live-server --port=5050",
   "p1": "sh ~/.bash/bin/gitpull.sh",
   "p2": "sh ~/.bash/bin/gitpush.sh",
-  "nn": "sudo rm -r node_modules",
+  "n": "sudo rm -r node_modules",
   "light": "lighthouse http://localhost:5050/ --view"
 },
 "devDependencies": {
