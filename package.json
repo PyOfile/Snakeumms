@@ -1,0 +1,18 @@
+{
+"name": "snakeumms",
+"version": "1.0.0",
+"private": true,
+"author": "PyOfile",
+"license": "MIT",
+"scripts": {
+  "dev": "live-server --port=5050",
+  "trace": "node --trace-deprecation app.js",
+  "p1": "sh ~/.bash/bin/gitpull.sh",
+  "p2": "sh ~/.bash/bin/gitpush.sh",
+  "nn": "sudo rm -r node_modules",
+  "light": "lighthouse http://localhost:5050/ --view"
+},
+"devDependencies": {
+  "live-server": "^0.8.0"
+}
+}
