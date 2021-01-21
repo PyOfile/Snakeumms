@@ -41,8 +41,40 @@ yarn
 yarn nn
 ```
 
+## run lighthouse
+
+### 
+```
+yarn light
+```
+
+# Commmand breakdown
+
+## yarn p1 & p2
+They are simply bash scripts I wrote to push or pull for git. All ofther git commands I just type.
+
+## yarn dev
+Launches live-server for development
+```
+yarn add -D live-server
+```
+Or just add it to your projects package.json dev dependencies.
+
+## yarn
+Installs the node_modules
+
+## yarn nn
+Deletes node_modules
+
+## yarn light
+Launches lighthouse node module
+```
+yarn global add lighthouse
+```
+You can use it with the plugin on firefox.
 
 
+## yarn dev mods
 ## Command line parameters:
 
    1. --port=NUMBER - select port to use (can also be done with PORT environment variable)
