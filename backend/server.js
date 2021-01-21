@@ -4,4 +4,4 @@ io.on ('connection', client => {
     client.emit('init', {data:'hello man'});
 });
 
-io.listen(3000);
+io.listen(4000);
