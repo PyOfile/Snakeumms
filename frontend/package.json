@@ -1,0 +1,19 @@
+{
+    "name": "frontend",
+    "proxy": "http://127.0.0.1:4000",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "live-server": "^0.8.0"
+    },
+    "scripts": {
+    "go": "live-server --port=5050"
+    },
+    "browserslist": {
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

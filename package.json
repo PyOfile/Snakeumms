@@ -5,16 +5,18 @@
   "author": "PyOfile",
   "license": "MIT",
   "scripts": {
-    "dev": "cd frontend && live-server --port=5050",
-    "run":"cd backend && nodemon server.js",
+    "serv":"nodemon backend/server",
+    "cli": "cd frontend && yarn go",
+    "dev":"concurrently \"yarn serv\" \"yarn cli\"",
     "p1": "sh ~/.bash/bin/gitpull.sh",
     "p2": "sh ~/.bash/bin/gitpush.sh",
-    "n": "sudo rm -r node_modules",
+    "build":"yarn && cd frontend && yarn",
+    "burn":"sudo rm -r node_modules && cd frontend && sudo rm -r node_modules",
     "light": "lighthouse http://localhost:5050/ --view"
   },
   "devDependencies": {
-    "live-server": "^0.8.0",
-    "nodemon":"^2.0.7"
+    "nodemon":"^2.0.7",
+    "concurrently": "^5.3.0"
   },
   "dependencies": {
     "socket.io": "^3.1.0"
