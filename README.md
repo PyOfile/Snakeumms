@@ -11,39 +11,51 @@ This is just a fun snake game to learn from! I am insterested in socket.io as we
 ```
 yarn p1
 ```
-
 ## git push
 ### 
 ```
 yarn p2
 ```
-
 They are simply bash scripts I wrote to push or pull for git. I made them scripts on my machine so I can use them for other builds. All other git commands I just type.
 #
-## start
+## Runs the front and back end
 ### 
 ```
 yarn dev
 ```
-Launches live-server for development. To add use command bellow.
+## Runs the frontend
+### 
 ```
-yarn add live-server -D
+yarn cli
+```
+## Runs the backend
+### 
+```
+yarn serv
+```
+Launches live-server for the frontend and nodemon for the backend that uses socket.io. Using concurrently to run them at the same time. To add use commands bellow.
+```
+cd frontend && yarn add live-server -D
+```
+```
+yarn add nodemon concurrently -D
+```
+```
+yarn add socket.io
 ```
 Or just add a package.json with it inside dev dependencies and install node_modules. More info is at the bottom to modify the script in the package.json to add custom touches to your test.
 #
-
 ## Install node_modules
 ###
 ```
-yarn
+yarn build
 ```
-Installs the node_modules. This is built into yarn package manager. You can use it to reinstall as well as update your packages. Just update the package versions numbers being careful about breaking changes. Then just run the command. All of the package.json packages listed will be up to date.
+Installs the node_modules for the front and back end. This is built into yarn package manager but here I need to install to the front and back end. You can use it to reinstall as well as update your packages. Just update the package versions numbers being careful about breaking changes. Then just run the command. All of the package.json packages listed will be up to date.
 #
-
 ## Remove node_modules
 ### 
 ```
-yarn n
+yarn burn
 ```
 Deletes node_modules. I wrote a sudo rm -r script and put it in the script section of the package.json.
 #
