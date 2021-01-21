@@ -3,7 +3,7 @@
 # SNAKE GAME
 #
 ## Description:
-This is just a fun snake game to learn from! I am insterested in socket.io as well as learning some basics for retro game dev. Perhaps progressing the build to a pwa and then some. Im using yarn for my package manager, lighthouse to test for future pwa stats, live-server node version to run my dev server. 
+This is just a fun snake game to learn from! I am insterested in socket.io as well as learning some basics for retro game dev. Perhaps progressing the build to a pwa and then some. Im using yarn for my package manager, lighthouse to test for future pwa stats. Then live-server, nodemon version to run my dev server. 
 #
 # Available Scripts
 ## git pull 
