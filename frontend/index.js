@@ -2,6 +2,10 @@ const BG_COLOR = '#1b1b1b';
 const SNAKE_COLOR = '#c2c2c2';
 const FOOD_COLOR = '#e66196';
 
+const socket = io('http://127.0.0.1:4000');
+
+socket.on('init', handleInit);
+
 const gameScreen = document.getElementById('gameScreen');
 
 let canvas, ctx;
@@ -71,3 +75,7 @@ function paintPlayer(playerState, size, color) {
 }
 
 paintGame(gameState)
+
+function handleInit(msg) {
+    console.log(msg)
+};

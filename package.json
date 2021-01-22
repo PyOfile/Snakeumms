@@ -6,19 +6,17 @@
   "license": "MIT",
   "scripts": {
     "serv":"nodemon backend/server",
-    "cli": "cd frontend && yarn go",
-    "dev":"concurrently \"yarn serv\" \"yarn cli\"",
+    "cli": "cd frontend && live-server --port=5050",
+    "dev":"concurrently \"yarn cli\" \"yarn serv\"",
     "p1": "sh ~/.bash/bin/gitpull.sh",
     "p2": "sh ~/.bash/bin/gitpush.sh",
-    "build":"yarn && cd frontend && yarn",
-    "burn":"sudo rm -r node_modules && cd frontend && sudo rm -r node_modules",
+    "build":"yarn && cd backend && yarn",
+    "burn":"sudo rm -r node_modules && cd backend && sudo rm -r node_modules",
     "light": "lighthouse http://localhost:5050/ --view"
   },
   "devDependencies": {
     "nodemon":"^2.0.7",
-    "concurrently": "^5.3.0"
-  },
-  "dependencies": {
-    "socket.io": "^3.1.0"
+    "concurrently": "^5.3.0",
+    "live-server": "^0.8.0"
   }
 }
