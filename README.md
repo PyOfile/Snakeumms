@@ -48,7 +48,7 @@ Or just add a package.json with it inside dev dependencies and install node_modu
 ## Install node_modules
 ###
 ```
-yarn
+yarn build
 ```
 Installs the node_modules. This is built into yarn package manager. You can use it to reinstall as well as update your packages. Just update the package versions numbers being careful about breaking changes. Then just run the command. All of the package.json packages listed will be up to date.
 #
