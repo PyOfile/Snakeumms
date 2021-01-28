@@ -5,33 +5,11 @@ const FOOD_COLOR = '#e66196';
 const socket = io('http://localhost:4000', {transports: ['websocket', 'polling', 'flashsocket']});
 
 socket.on('init', handleInit);
+socket.on('gamestate', handleGameState);
 
 const gameScreen = document.getElementById('gameScreen');
 
 let canvas, ctx;
-
-const gameState = {
-    player: {
-        pos:{
-            x: 3,
-            y: 10,
-        },
-        vel:{
-            x: 1,
-            y: 0,
-        },
-        snake:[
-            {x: 1,y: 10},
-            {x: 2,y: 10},
-            {x: 3,y: 10},
-        ],
-    },
-    food:{
-        x: 7,
-        y: 7,
-    },
-    gridsize: 20,
-};
 
 function init() {
     canvas = document.getElementById('canvas');
@@ -74,8 +52,11 @@ function paintPlayer(playerState, size, color) {
     }
 }
 
-paintGame(gameState)
-
 function handleInit(msg) {
-    console.log(msg)
+    console.log(msg);
+};
+
+function handleGameState(gameState) {
+    gameState = JSON.parse(gameState);
+    requestAnimationFrame(() => paintGame(gameState));
 };
