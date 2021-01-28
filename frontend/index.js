@@ -2,7 +2,7 @@ const BG_COLOR = '#1b1b1b';
 const SNAKE_COLOR = '#c2c2c2';
 const FOOD_COLOR = '#e66196';
 
-const socket = io('http://127.0.0.1:4000');
+const socket = io('http://localhost:4000', {transports: ['websocket', 'polling', 'flashsocket']});
 
 socket.on('init', handleInit);
 
